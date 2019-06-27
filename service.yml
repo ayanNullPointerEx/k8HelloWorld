@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: k8-hello-world-service
+spec:
+  selector:
+    name: k8-hello-world-label
+  type: NodePort
+  ports:
+    - name: http
+      port: 81
+      targetPort: 8090
+      protocol: TCP
